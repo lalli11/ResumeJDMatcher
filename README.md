@@ -1,5 +1,5 @@
-# ResumeJDMatcher
-A tool that intelligently matches resumes with job descriptions, highlighting key skills and experiences,
+# ResumeJDMatcherDescription
+A tool that intelligently matches resumes with job descriptions, highlighting key skills and experiences.
 This is a Resume Matcher Web App built using Python and Streamlit. It automatically analyzes how well a candidate’s resume matches a job description (JD) by extracting and comparing the textual content of both PDF files. The system uses TF-IDF and cosine similarity to calculate a match score and highlights matched and missing keywords.
 
 ## 🚀 Features
@@ -11,7 +11,7 @@ This is a Resume Matcher Web App built using Python and Streamlit. It automatica
   - ⚠ Missing Keywords (areas to improve)
 - Score-based feedback: Great / Average / Low Match.
 - Clean and interactive UI with **Streamlit**.
-- 
+ 
 ## 🧠 How It Works
 1. Extract text from the uploaded PDF files using `PyPDF2`.
 2. Clean the text by:
