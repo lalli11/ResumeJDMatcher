@@ -33,5 +33,6 @@ This is a Resume Matcher Web App built using Python and Streamlit. It automatica
 | re (regex)  | Text preprocessing                |
 
 ## ▶️ Running the App
+```bash
 pip install -r requirements.txt
 streamlit run resume_job_matcher.py
