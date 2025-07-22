@@ -1,33 +1,37 @@
 # ResumeJDMatcher
-A tool that intelligently matches resumes with job descriptions, highlighting key skills and experiences
-ResumeJDMatcher Description
+A tool that intelligently matches resumes with job descriptions, highlighting key skills and experiences,
 This is a Resume Matcher Web App built using Python and Streamlit. It automatically analyzes how well a candidate’s resume matches a job description (JD) by extracting and comparing the textual content of both PDF files. The system uses TF-IDF and cosine similarity to calculate a match score and highlights matched and missing keywords.
 
-⭐ Key Features
-📄 Upload and analyze Resume and JD in PDF format
+## 🚀 Features
+- Upload resume and job description PDFs.
+- Extracts and cleans text using NLP techniques.
+- Calculates match score using **TF-IDF** and **Cosine Similarity**.
+- Displays:
+  - ✅ Matched Keywords (your strengths)
+  - ⚠ Missing Keywords (areas to improve)
+- Score-based feedback: Great / Average / Low Match.
+- Clean and interactive UI with **Streamlit**.
+- 
+## 🧠 How It Works
+1. Extract text from the uploaded PDF files using `PyPDF2`.
+2. Clean the text by:
+   - Lowercasing
+   - Removing punctuation
+   - Removing stopwords using `nltk`
+3. Convert the text into vectors using `TfidfVectorizer`.
+4. Calculate cosine similarity between resume and job description.
+5. Output score and show keyword insights.
 
-🤖 Automatic text extraction and cleaning
+## 🛠 Tech Stack
+| Tool        | Purpose                           |
+|-------------|-----------------------------------|
+| Python      | Core programming language         |
+| Streamlit   | Web interface                     |
+| scikit-learn| TF-IDF and cosine similarity      |
+| nltk        | Stopwords removal                 |
+| PyPDF2      | PDF text extraction               |
+| re (regex)  | Text preprocessing                |
 
-📊 Computes a match score between resume and JD using NLP
-
-✅ Displays matched keywords (strengths)
-
-⚠ Shows missing keywords (areas for improvement)
-
-💡 Visual feedback based on score (success, warning, or error)
-
-Tech Stack
-Frontend/UI: Streamlit – for creating interactive web apps
-
-Backend & ML/NLP:
-
-scikit-learn – TF-IDF vectorization and cosine similarity
-
-nltk – for stopwords removal
-
-PyPDF2 – for extracting text from PDF files
-
-re – regular expressions for text cleaning
-🚀 How to Run:
+## ▶️ Running the App
 pip install -r requirements.txt
-streamlit run "ml.py"
+streamlit run resume_job_matcher.py
